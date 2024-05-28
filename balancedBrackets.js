@@ -6,7 +6,6 @@ const balancedBrackt = (string) => {
     for (let i = 0; i <= string.length - 1; i++) {
         stake.push(string[i]);
         const open = stake[stake.length - 2];
-        console.log(open)
         const close = stake[stake.length - 1];
         const bracket = open + close
         if(brackets.includes(bracket)) {
@@ -14,7 +13,7 @@ const balancedBrackt = (string) => {
             stake.pop()
         }
     }
-    
+
     return stake.length === 0
 }
 console.log(balancedBrackt(string))

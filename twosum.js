@@ -1,18 +1,22 @@
-var twoSum = function (nums, target) {
+nums = [2,7,11,15], target = 9
+
+const twoSum = function (nums, target) {
   const map = new Map();
   let pairTarget;
 
-  for (const index in nums) {
-    pairTarget = target - nums[index];
+    for (const index in nums) {
+      map.set(nums[index], index);
+        
+      pairTarget = target - nums[index];
+     
 
     if (map.has(pairTarget)) {
       return [index, map.get(pairTarget)];
     }
-
-    map.set(nums[index], index);
   }
 };
 
+console.log(twoSum(nums, target))
 
 // 1. Two Sum
 
