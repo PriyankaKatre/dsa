@@ -1,0 +1,25 @@
+const arr = [2, 1, 9, 2, 1, 8, 5, 6, 3]
+const num = 3
+
+const sumOfMaxSubArray = (arr, num) => {
+    let maxSum = 0;
+    let tempSum = 0;
+
+    let max = 0;
+    if (num > arr.length) return null;
+    for (let i = 0; i < num; i++) {
+        maxSum += arr[i];
+        max = Math.max(max, arr[i])
+    }
+console.log('max', max)
+    tempSum = maxSum
+    for (let i = num; i < arr.length; i++) {
+        console.log('maxSum', maxSum)
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum)
+    }
+
+    return maxSum
+}
+
+console.log(sumOfMaxSubArray(arr, num))
