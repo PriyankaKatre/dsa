@@ -1,19 +1,23 @@
-const string = '{[{()}]})'
+const string = '({[{()}]})'
 
 const balancedBrackt = (string) => {
-    const stake = [];
-    const brackets = '{}, [], ()';
-    for (let i = 0; i <= string.length - 1; i++) {
-        stake.push(string[i]);
-        const open = stake[stake.length - 2];
-        const close = stake[stake.length - 1];
-        const bracket = open + close
-        if(brackets.includes(bracket)) {
-            stake.pop();
-            stake.pop()
+    const stack = [];
+    const parentheses = '{}, (), []';
+    let count= 0;
+    let bracket
+    for(let i in string) {
+        stack.push(string[i]);
+        const open = stack[stack.length - 2];
+        const close = stack[stack.length - 1]
+
+        bracket = open + close
+        if (parentheses.includes(bracket)) {
+            stack.pop();
+            stack.pop();
+            count++
         }
     }
 
-    return stake.length === 0
+    return count
 }
 console.log(balancedBrackt(string))
