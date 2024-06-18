@@ -9,12 +9,15 @@ const lengthOfLongestSubstring = (string) => {
             end++;
             max = Math.max(max, set.size)
         }
+
         else {
             set.delete(string[start]);
             start++
         }
     }
-    return max;
+    return max
+    console.log('max', max)
+    //return set;
 }
 
-console.log(lengthOfLongestSubstring('bbcbb'))
+console.log(lengthOfLongestSubstring('dbcbab'))
