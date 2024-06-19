@@ -34,13 +34,10 @@ class SinglyLinkedList {
     pop() {
         if (!this.head) return undefined;
         let current = this.head;
-        console.log('current.next', current.next)
         let newTail = current;
         while(current.next) {
             newTail = current;
             current = current.next;
-            console.log('newTail', newTail)
-            console.log('current.next inside', current.next)
         }
         this.tail = newTail;
         this.tail.next = null;
