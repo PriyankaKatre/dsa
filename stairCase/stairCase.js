@@ -6,7 +6,7 @@ const stair = (n) => {
     return steps[n - 1];
 }
 
-console.log(stair(3))
+console.log(stair(4))
 
 4
 

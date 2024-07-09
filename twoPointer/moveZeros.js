@@ -3,9 +3,10 @@ const moveZeros = (arr) => {
     let right = 0;
     while (right < arr.length - 1) {
         if (arr[right] !== 0) {
-            console.log('left', arr[left]);
-            console.log('right', arr[right]);
+            console.log('left', left);
+            console.log('right', right);
             [arr[left], arr[right]] = [arr[right], arr[left]];
+            //console.log(arr)
             left++
         }
         right++

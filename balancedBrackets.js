@@ -4,7 +4,7 @@ const balancedBrackt = (string) => {
     const stack = [];
     const parentheses = '{}, (), []';
     let count= 0;
-    let bracket
+    let bracket;
     for(let i in string) {
         stack.push(string[i]);
         const open = stack[stack.length - 2];

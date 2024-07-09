@@ -5,4 +5,4 @@ const isSubSequence = (str1, str2) => {
     return isSubSequence(str1, str2.slice(1))
 }
 
-console.log(isSubSequence('hello', 'world'))
+console.log(isSubSequence('hello', 'hello'))

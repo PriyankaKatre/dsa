@@ -1,11 +1,12 @@
-const array = ['q', 2, 3, {'a': 6}, [4, [5, 6]], 7, 8]
+const array = ['q', 2, 3, {'a': 6}, [4, [5, [6, 10]]], 7, 8]
 
-const flattenedArray = [];
 
-const flattenArray = (arr, flattenedArray) => {
+
+const flattenArray = (arr) => {
+ const flattenedArray = [];
     arr.forEach(element => {
         if (Array.isArray(element)) {
-            flattenArray(element, flattenedArray)
+            flattenedArray.push(...flattenArray(element))
         } else {
             flattenedArray.push(element)
         }
@@ -13,8 +14,8 @@ const flattenArray = (arr, flattenedArray) => {
     return flattenedArray
 }
 
-console.log(flattenArray(array, []))
+console.log(flattenArray(array))
 
-console.log(array.flat(2))
+console.log(array.flat(3))
 
 
