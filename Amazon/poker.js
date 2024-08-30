@@ -60,7 +60,7 @@ const pokerCard = (arr) => {
 
     for (let [key, val] of numMap) {
         if (val === 3) {
-             return 'Three of a kind'
+            return 'Three of a kind'
         }
         if (val === 2) {
             return 'Pair'

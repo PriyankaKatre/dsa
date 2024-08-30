@@ -29,7 +29,7 @@ const obj = [
 const outputObject = {}
 
 obj.forEach(val => {
-    console.log(val.key)
+    console.log(val)
     if (outputObject[val.key]) {
         outputObject[val.key].push(val)
     }
