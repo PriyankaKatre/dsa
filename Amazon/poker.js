@@ -41,8 +41,9 @@ const pokerCard = (arr) => {
     const numMap = new Map();
     const charMap = new Map();
     for (let val of arr) {
-        const number = val.slice(0, - 1);
+        const number = val.slice(0, -1);
         const char = val.slice(val.length - 1)
+
         if (!numMap.has(number)) {
             numMap.set(number, 1)
         } else {

@@ -18,6 +18,7 @@ const balancedBrackt = (string) => {
         }
     }
 
+
     return count
 }
 console.log(balancedBrackt(string))
