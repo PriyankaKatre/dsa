@@ -11,7 +11,8 @@ const isAnagram = (string1, string2) => {
     } else map.set(val, 1);
   }
     const obj = Object.fromEntries(map.entries());
-  console.log(obj)
+    console.log('obj', obj)
+
   for (let val of string2) {
     if (!map.has(val)) return false;
     map.set(val, map.get(val) - 1);
