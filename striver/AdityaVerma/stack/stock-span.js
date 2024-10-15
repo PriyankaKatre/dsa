@@ -13,10 +13,9 @@ const stockSpan = (arr) => {
                 result.push(i+1)
             }
             else {
-                 result.push(i - stack[stack.length - 1]);
+                result.push(i - stack[stack.length - 1]);
             }
         }
-
 
         stack.push(i)
     }

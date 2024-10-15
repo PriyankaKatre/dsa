@@ -5,9 +5,11 @@ const NearestGreatertoright_NextLargestElement = (arr) => {
   for (let i = arr.length - 1; i >= 0; i--) {
     if (stack.length === 0) {
       result.push(-1);
-    } else if (stack.length > 0 && stack[stack.length - 1] > arr[i]) {
+    }
+    else if (stack.length > 0 && stack[stack.length - 1] > arr[i]) {
       result.push(stack[stack.length - 1]);
-    } else if (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+    }
+    else if (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
       while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
         stack.pop();
       }

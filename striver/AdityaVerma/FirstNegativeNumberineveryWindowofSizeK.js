@@ -30,3 +30,5 @@ function firstNegativeInWindow(arr, k) {
 const arr = [12, -1, -7, 8, -15, 30, 16, 28];
 const k = 3;
 console.log(firstNegativeInWindow(arr, k)); // Output: [-1, -1, -7, -15, -15, 0]
+
+
