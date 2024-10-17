@@ -16,9 +16,7 @@ const NearestSmallertoRight = (arr) => {
             } else {
                 result.push(stack[stack.length-1])
             }
-
         }
-
         stack.push(arr[i])
     }
     return result.reverse()
