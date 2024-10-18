@@ -3,8 +3,8 @@ const maxAreaHistogram = (arr) => {
       NSRI = [],
       stack1 = [],
       stack2 = [],
-        width = [],
-        area = [],
+      width = [],
+      area = [],
       maxArea =0,
       nsrPsudeoIndex = arr.length,
       nslPsudeoIndex = -1;
