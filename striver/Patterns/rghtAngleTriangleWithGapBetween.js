@@ -15,10 +15,7 @@ const binaryRightAngleTriangle = (n) => {
         for (let k = i; k >= 0; k--) {
           row2 += k + 1;
         }
-        //
         console.log(row1,row3,row2)
-        //console.log(row2);
-
     }
 }
 binaryRightAngleTriangle(4)
