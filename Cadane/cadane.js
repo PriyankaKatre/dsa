@@ -18,7 +18,7 @@ const sumOfMaxSubArray = (arr) => {
     }
     return max
 }
-console.log(sumOfMaxSubArray(arr2))
+console.log(sumOfMaxSubArray(arr3))
 
 
 // const obj = {

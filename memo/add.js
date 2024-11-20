@@ -2,7 +2,6 @@ const map = new Map()
 
 const memoizeOne = (fn) => {
     const temp = (...args) => {
-            //console.log(args);
         const key = args.join('_')
          console.log(JSON.stringify(args));
         if (map.has(key)) {

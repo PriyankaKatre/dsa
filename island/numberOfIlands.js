@@ -64,3 +64,11 @@ console.log(numberOFIlands(grid))
 
 // }
 // console.log(countIlands(grid))
+
+let str = "this is a very long string";
+
+const minMax = (str) => {
+    let sortedString = str.split(' ').sort((a, b) => a.length - b.length)
+   console.log(sortedString)
+};
+console.log(minMax(str));

@@ -1,5 +1,5 @@
 function flippingMatrix(matrix) {
-  const n = matrix.length / 2;
+    const n = matrix.length / 2;
   let maxSum = 0;
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {

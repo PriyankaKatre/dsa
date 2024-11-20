@@ -1,9 +1,6 @@
 const Array = [7, 2, 4, 5, 1, 3, 6]
-
 const buySellStocks = (arr) => {
-
     // Nive Approach
-
     let buy_price = arr[0];
     let profit = 0
 
