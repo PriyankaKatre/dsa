@@ -1,9 +1,11 @@
 const missingNumber = (arr, num) => {
-    for (let i = 0; i < num; i++) {
-        if (arr[i] !== i+1) {
-            return i+1
+    let result = [];
+    let set = new Set(arr);
+    for (let i = 1; i < num; i++) {
+        if (!set.has(i)) {
+            result.push(i)
         }
     }
-    return -1
+    return result
 }
-console.log(missingNumber([1, 2, 3, 5], 5));
+console.log(missingNumber([1, 2, 2, 5, 9], 9));
