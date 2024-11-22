@@ -6,6 +6,6 @@ const missingNumber = (arr, num) => {
             result.push(i)
         }
     }
-    return result
+    return Array.from(result)
 }
 console.log(missingNumber([1, 2, 2, 5, 9], 9));
