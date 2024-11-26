@@ -11,7 +11,7 @@ const majorityElement = (arr, n) => {
 
     for (let key of Object.keys(map)) {
         if (map[key] > n / 2) {
-            return key
+            return +key
         }
     }
     console.log(map)
