@@ -1,36 +1,37 @@
 const reArrangeArrayElement = (arr) => {
-    let positive = [];
-    let negative = [];
+    let n = arr.length;
+    let pos = [];
+    let neg = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < 0) {
-            negative.push(arr[i])
+    for (let i = 0; i < n; i++) {
+        if (arr[i] > 0) {
+            pos.push(arr[i])
         } else {
-            positive.push(arr[i])
+            neg.push(arr[i])
         }
     }
-    if (positive.length < negative.length) {
-        for (let i = 0; i < positive.length; i++) {
-            arr[2 * i] = positive[i];
-            arr[2 * i + 1] = negative[i]
+    if (pos.length < neg.length) {
+        for (let i = 0; i < pos.length; i++) {
+            arr[2 * i] = pos[i];
+            arr[2 * i + 1] = neg[i]
         }
-        let index = positive.length * 2;
-        for (let i = positive.length; i < negative.length; i++) {
-            arr[index] = negative[i];
+        let index = pos.length * 2;
+        for (let i = pos.length; i < neg.length; i++) {
+            arr[index] = neg[i];
             index++
         }
     } else {
-        for (let i = 0; i < negative.length; i++) {
-            arr[2 * 1] = positive[i];
-            arr[2*i+1] = negative[i]
+        for (let i = 0; i < neg.length; i++) {
+            arr[2 * i] = pos[i];
+            arr[2*i+1] = neg[i]
         }
-        let index = negative.length * 2;
-        for (let i = negative.length; i < positive.length; i++) {
-            arr[index] = p[i];
-            i++
+        let index = neg.length * 2;
+        for (let i = neg.length; i < pos.length; i++) {
+            arr[index] = pos[i];
+            index++
         }
     }
   return arr
 }
 
-console.log(reArrangeArrayElement([1, -5, -4, -6, 2]));
+console.log(reArrangeArrayElement([3, 1, -2, -5, 2, -4]));
