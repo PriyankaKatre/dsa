@@ -1,14 +1,14 @@
-const LengthofthelongestsubarraywithzeroSum = (arr) => {
+const LengthofthelongestsubarraywithzeroSum = (arr, k) => {
     let left = 0;
     let right = 0;
     let max
     while (right < arr.length) {
         let sum = arr[right];
-        while (sum > 0 && left <= right) {
+        while (sum > k && left <= right) {
             sum -= arr[left];
             left++
         }
-      if (sum === 0) {
+      if (sum === k) {
         max = Math.max(max, right - left + 1);
         return max;
       }
@@ -16,4 +16,4 @@ const LengthofthelongestsubarraywithzeroSum = (arr) => {
     }
 
 }
-console.log(LengthofthelongestsubarraywithzeroSum([9, -3, 3, -1, 6, -5]));
+console.log(LengthofthelongestsubarraywithzeroSum([3, 1, 2, 4], 6));
