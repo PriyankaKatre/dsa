@@ -19,7 +19,7 @@ const zigzag = (arr) => {
         }
       } else {
         j = 0;
-        while (j < arr[0].length) {
+        while (j < arr[i].length) {
           result.push(arr[i][j]);
           j++;
         }
