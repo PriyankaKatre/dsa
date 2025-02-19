@@ -4,7 +4,7 @@ const flattenAndSum = (arr) => {
 
   console.log(
     flatArray.reduce((acc, it) => {
-     return  acc + it;
+     return acc + it;
     }, 0)
   );
   for (let item of arr) {

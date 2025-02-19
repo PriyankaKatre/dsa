@@ -12,7 +12,6 @@ const sLargestElement = (arr) => {
             sLargest = arr[i]
         }
     }
-
     return sLargest;
 }
 
