@@ -16,18 +16,6 @@ const moveZerosToEnd = (arr) => {
 };
 
 console.log(moveZerosToEnd([1, 0, 3, 4, 5, 0, 8, 9, 0, 2]));
-// Using Built in method
-
-const moveZerosEnd = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    let nums = arr.filter((a) => a !== 0);
-    let zeros = arr.filter((a) => a === 0);
-    return [...nums, ...zeros];
-  }
-};
-
-console.log(moveZerosEnd([1, 0, 3, 4, 5, 0, 8, 9, 0, 2]));
-
 
 
 //Two Pointer
@@ -47,3 +35,18 @@ const moveZeros = (arr) => {
 };
 
 console.log(moveZeros([1, 0, 3, 4, 5, 0, 8, 9, 0, 2]));
+
+// Using Built in method
+
+const moveZerosEnd = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let nums = arr.filter((a) => a !== 0);
+    let zeros = arr.filter((a) => a === 0);
+    return [...nums, ...zeros];
+  }
+};
+
+console.log(moveZerosEnd([1, 0, 3, 4, 5, 0, 8, 9, 0, 2]));
+
+
+
