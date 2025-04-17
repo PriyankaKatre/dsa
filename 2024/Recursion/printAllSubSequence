@@ -1,0 +1,19 @@
+const printSubSequence = (index, ds, sum, targetSum, arr, n) =>{
+	if(index === n) {
+		if(sum===targetSum) {
+			console.log(ds)				
+		}
+		return;
+	}
+	ds.push(arr[index])
+	sum+=arr[index]
+	printSubSequence(index+1, ds, sum, targetSum, arr, n)
+	ds.pop(arr[index])
+	sum-=arr[index]
+	printSubSequence(index+1, ds, sum, targetSum, arr, n)
+	
+	
+}
+
+printSubSequence (0, [], 0, 2, [1, 2, 1], 3)
+	
