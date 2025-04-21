@@ -14,6 +14,9 @@ const buySellStocks = (arr) => {
         }
     }
     return profit;
+}
+
+    
     //Brute force approach
     let maxProfit = 0;
     for (let i = 0; i < arr.length; i++) {
