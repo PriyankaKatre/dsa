@@ -57,16 +57,24 @@ class LinkedList {
             this.size++
         }
     }
-    removeForm(index) {
-        if (index < 0 || index >= this.size) {
-            return null
-        }
-        let removeNode;
-        if (index === 0) {
-            removeNode = this.head;
-            this.head = this.head.next
-        }
-    }
+    removeFrom(index) {
+		let removed
+		if(index < 0 || index > this.size) {
+			return null
+		}	
+		else if(index === 0) {
+			removed = this.head
+			this.head = this.head.next
+		}else {
+			let prev = this.head;
+			for(let i = 0; i < index-1; i++) {
+				prev = prev.next
+			}
+			prev.next = prev.next.next
+			
+		}
+		this.size--
+	}
     print() {
         if (this.isEmpty()) {
             console.log('list is empty')
