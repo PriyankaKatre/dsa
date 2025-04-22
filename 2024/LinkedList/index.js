@@ -166,3 +166,110 @@ console.log(linkedList.getNodeAt(1)); // Output: Node { value: 3, next: Node { v
 console.log(linkedList.contains(1)); // Output: true
 linkedList.clear();
 console.log(linkedList.isEmpty()); // Output: true
+
+
+
+
+//constructors
+
+function Node (val) {
+		this.data = val;
+		this.next = null
+}
+
+function LinkedList () {
+	this.head = null;
+	this.size = 0;
+
+	this.append = function (val) {
+		let newNode = new Node(val);
+		if(this.size === 0) {
+			this.head = newNode
+		}
+		else {
+			let current = this.head
+			while(current.next) {
+				current = current.next
+			}
+			current.next = newNode
+		}
+		this.size++;
+		return this.node
+	}
+
+	this.list = function () {
+		let result = []
+		let current = this.head
+		while(current) {
+            result.push({ data: current.data, next: current.next ? current.next.data : null });
+
+			current= current.next
+		}
+		return result
+		
+	}
+}
+
+let List = new LinkedList()
+List.append(1);
+List.append(2);
+List.append(3);
+List.append(4)
+
+
+console.log(List)
+
+
+
+
+
+// Clousers
+
+function Node (val){
+	return{
+		data:val,
+		next:null
+	}
+}
+
+function LinkedList(){
+	let head= null;
+	let count = 0
+
+	function append(val){
+		const newNode = new Node(val);
+		if(count === 0) {
+			head = newNode
+		}else {
+			let curr = head;
+			while(curr.next) {
+				curr = curr.next;
+			}
+			curr.next = newNode
+		}
+		count++
+	}
+	function list(){
+		let result = [];
+		let curr = head;
+		while(curr) {
+			result.push({data: curr.data, next:curr.next? curr.next.data:null})
+			curr= curr.next
+		}
+		return result
+	}
+
+	return {
+		append,
+		list
+	}
+}
+
+let List = new LinkedList()
+List.append(1);
+List.append(2);
+List.append(3);
+List.append(4)
+console.log(List.head)
+console.log(List.count)
+console.log(List.list())
